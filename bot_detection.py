@@ -1,33 +1,24 @@
-Pond Bot & Sybil Detection - Example Source Code
-
-This is a minimal example showing how the provided dataset can be used
-to detect bots, Sybil wallets, and reward-farming accounts.
-
-Dataset: dataset.csv
-Columns: username, followers, following, posts, account_age_days, engagement_rate, label, scenario
-
-Usage:
-- Load dataset
-- Inspect patterns
-- Build detection models (optional)
-
-No actual model implementation is required for submission; this file
-serves to satisfy the "source code" requirement.
-
 import pandas as pd
 
-* Load the dataset
-df = pd.read_csv("../dataset.csv")
+# Load the dataset
+data = pd.read_csv('dataset.csv')
 
-* Show basic info
-print("Dataset preview:")
-print(df.head())
+# Display basic info
+print("Dataset Info:")
+print(data.info(), "\n")
 
-* Example: Count bot vs human
-counts = df['label'].value_counts()
-print("\nAccount type counts:")
-print(counts)
+# Display first 5 rows
+print("First 5 rows of the dataset:")
+print(data.head(), "\n")
 
-* Example: List accounts by scenario
-print("\nAccounts by scenario:")
-print(df.groupby('scenario')['username'].apply(list))
+# Count number of bots vs humans
+bot_count = data[data['label'] == 'bot'].shape[0]
+human_count = data[data['label'] == 'human'].shape[0]
+
+print(f"Number of bot accounts: {bot_count}")
+print(f"Number of human accounts: {human_count}")
+
+# Optional: simple detection example
+print("\nExample detection based on engagement rate:")
+low_engagement_bots = data[data['engagement_rate'] < 0.05].shape[0]
+print(f"Accounts with very low engagement (possible bots): {low_engagement_bots}")
