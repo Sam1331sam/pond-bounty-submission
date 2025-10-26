@@ -36,3 +36,6 @@ This dataset is for educational and bounty purposes only. Free to use for the Po
 
 * Reproducibility
 No code is required to demonstrate this dataset; it is ready for analysis, visualization, or integration into detection pipelines.
+
+This project demonstrates a simple yet effective approach to identifying inauthentic accounts on the Pond platform. Using a structured dataset of account metrics and basic engagement analysis, we can distinguish between human and bot activity. While this submission uses straightforward rules for demonstration, the methodology can be easily extended with more advanced detection algorithms, additional features, or larger datasets. The provided code and dataset are fully reproducible, enabling further experimentation and improvement to enhance platform integrity and fairness.
+
