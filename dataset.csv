@@ -1,0 +1,11 @@
+username,followers,following,posts,account_age_days,engagement_rate,label,scenario
+user1,10,5,100,365,0.1,human,social account
+user2,50,25,500,730,0.3,human,social account
+user3,500,300,1000,200,0.05,bot,social account
+user4,5,2,50,100,0.01,bot,social account
+user5,100,80,600,400,0.25,human,social account
+wallet1,0,0,5,50,0.0,bot,Sybil wallet
+wallet2,2,0,10,100,0.0,human,Sybil wallet
+wallet3,0,1,20,30,0.0,bot,Sybil wallet
+reward1,100,100,1000,200,0.05,bot,reward farming
+reward2,50,50,500,365,0.2,human,reward farming
